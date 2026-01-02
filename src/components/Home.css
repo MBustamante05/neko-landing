@@ -1,0 +1,24 @@
+.writing-mode-vertical {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+}
+
+/* tener en cuenta el gap de 10px */
+@keyframes infiniteScroll {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(calc(-25% - 30px));
+    }
+}
+
+.infinite-scroll {
+    animation: infiniteScroll 15s linear infinite;
+    white-space: nowrap;
+}
+
+.infinite-scroll:hover {
+    animation-play-state: paused;
+}
