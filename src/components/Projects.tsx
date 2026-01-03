@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRightCircle } from "lucide-react";
 
 function Projects() {
   return (
@@ -25,7 +25,7 @@ function Projects() {
               />
               <div className="absolute brightness-90 hover:brightness-100 transition-all duration-300 ease-in-out inset-0 bg-black rounded-3xl opacity-50 hover:opacity-10 z-10"></div>
               <div className="relative z-20 h-full p-10 flex items-end">
-                <ArrowRight className="border-7 border-[var(--main-color)] text-[var(--main-color)] p-2 w-24 h-24 rounded-full hover:translate-x-2 transition-transform duration-300 ease-in-out cursor-pointer" />
+                <ArrowRightCircle className="text-[var(--main-color)] p-2 w-32 h-32 hover:translate-x-2 transition-transform duration-300 ease-in-out cursor-pointer" />
               </div>
             </div>
             <div className="relative rounded-3xl bg-[url(/art2.jpeg)] grayscale bg-cover bg-center col-span-3">
@@ -59,7 +59,7 @@ function Projects() {
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </span>
               </div>
-              <ArrowRight className="border-2 p-2 w-17 h-17 rounded-full hover:translate-x-2 transition-transform duration-300 ease-in-out cursor-pointer" />
+              <ArrowRightCircle className="p-2 w-20 h-20 hover:translate-x-2 transition-transform duration-300 ease-in-out cursor-pointer" />
             </div>
           </div>
         </div>

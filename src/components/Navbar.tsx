@@ -5,9 +5,9 @@ export default function Navbar() {
       <div className="max-w-[1680px] flex items-center py-4 text-white uppercase mx-auto">
         <h1 className="text-2xl font-bold">Navbar</h1>
         <ul className="flex gap-10 text-center mx-auto">
-          <li className={aStyle}>Home</li>
-          <li className={aStyle}>Projects</li>
-          <li className={aStyle}>Contact</li>
+          <li className={aStyle}><a href="#home">Home</a></li>
+          <li className={aStyle}><a href="#projects">Projects</a></li>
+          <li className={aStyle}><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
