@@ -1,11 +1,17 @@
+'use client'
 import { ArrowRightCircle } from "lucide-react";
+import { motion } from "framer-motion";
 
 function Projects() {
   return (
-    <div className="h-screen bg-black text-white px-10 pt-20">
+    <div className="h-screen bg-black text-white px-10 pt-20 overflow-hidden">
       <div className="grid grid-cols-8 h-full gap-4">
         <div className="flex flex-col col-span-5 h-full gap-4">
-          <div className="relative h-1/2 rounded-3xl bg-[url('/main-photo2.jpeg')] bg-cover bg-center p-10">
+          <motion.div
+          initial={{ opacity: 0, x: -120 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+           className="relative h-1/2 rounded-3xl bg-[url('/main-photo2.jpeg')] bg-cover bg-center p-10">
             <h1 className="text-9xl font-bold uppercase text-white">main</h1>
             <h1 className="text-9xl font-bold uppercase text-white]">
               Projects
@@ -16,9 +22,13 @@ function Projects() {
               officiis cupiditate illo consequuntur aliquam, fugit suscipit
               nemo, natus quibusdam placeat? Consequatur, numquam velit.
             </p>
-          </div>
+          </motion.div>
           <div className="grid grid-cols-5 gap-4 h-1/2">
-            <div className="relative rounded-3xl col-span-2">
+            <motion.div
+            initial={{ opacity: 0, y: 120 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+             className="relative rounded-3xl col-span-2">
               <img
                 src="/art1.jpeg"
                 className="absolute rounded-3xl grayscale bg-cover bg-center"
@@ -27,15 +37,23 @@ function Projects() {
               <div className="relative z-20 h-full p-10 flex items-end">
                 <ArrowRightCircle className="text-[var(--main-color)] p-2 w-32 h-32 hover:translate-x-2 transition-transform duration-300 ease-in-out cursor-pointer" />
               </div>
-            </div>
-            <div className="relative rounded-3xl bg-[url(/art2.jpeg)] grayscale bg-cover bg-center col-span-3">
+            </motion.div>
+            <motion.div 
+            initial={{ opacity: 0, y: 120 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+            className="relative rounded-3xl bg-[url(/art2.jpeg)] grayscale bg-cover bg-center col-span-3">
               <div className="absolute brightness-90 hover:brightness-100 transition-all duration-300 ease-in-out inset-0 bg-black rounded-3xl opacity-50 hover:opacity-10 z-10"></div>
               <div className="relative z-20"></div>
-            </div>
+            </motion.div>
           </div>
         </div>
         <div className="flex flex-col col-span-3 gap-4 ">
-          <div className="relative rounded-3xl h-3/4">
+          <motion.div 
+          initial={{ opacity: 0, x: 120 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="relative rounded-3xl h-3/4">
             <img
               src="/art4.jpeg"
               className="absolute rounded-3xl grayscale bg-cover bg-center"
@@ -47,8 +65,12 @@ function Projects() {
               </h1>
               <div className="bg-[var(--secondary-color)] w-30 h-30 rounded-full"></div>
             </div>
-          </div>
-          <div className="rounded-3xl bg-[var(--main-color)] text-white h-1/4 p-4 flex flex-col justify-center gap-1">
+          </motion.div>
+          <motion.div 
+          initial={{ opacity: 0, x: 120 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          className="rounded-3xl bg-[var(--main-color)] text-white h-1/4 p-4 flex flex-col justify-center gap-1">
             <h1 className="text-9xl uppercase font-bold leading-none tracking-tighter">
               Designs
             </h1>
@@ -61,7 +83,7 @@ function Projects() {
               </div>
               <ArrowRightCircle className="p-2 w-20 h-20 hover:translate-x-2 transition-transform duration-300 ease-in-out cursor-pointer" />
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
